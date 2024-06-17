@@ -12,6 +12,8 @@ public class ReceiveMain {
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
+
+        /* TODO: try catch in case connection fails */
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
 
